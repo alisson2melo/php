@@ -10,7 +10,7 @@ Uma tabela organiza as informações em linhas e colunas, onde manterão os dado
 depois executaremos esta consulta SQL passando-a para a função PHP "mysqli_query()" para criar nossa tabela. */
 
 //Esteja rodando servidor MySQL com user "root" e sem senha
-$link = mysqli_connect("localhost", "root", "", "empregados");
+$link = mysqli_connect("localhost", "root", "5b7a20cxmFEM", "empregados");
 
 //Verificar conexão
 if($link === false){

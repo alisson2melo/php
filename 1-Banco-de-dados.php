@@ -11,7 +11,7 @@ Porém, fornece uma maneira mais fácil de se conectar e executar consultas em u
 /* Tentativa de conexão do servidor MySQL. 
 Assumindo que esteja rodando um servidor MySQL com configurações padrão (user 'root' sem senha) */
 
-$link = mysqli_connect("localhost", "root", ""); //"mysql_connect()" - Abre uma conexão com um servidor MySQL
+$link = mysqli_connect("localhost", "root", "5b7a20cxmFEM"); //"mysql_connect()" - Abre uma conexão com um servidor MySQL
  
 // Verificar conexão 
 if($link === false){

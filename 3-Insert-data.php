@@ -8,7 +8,7 @@ iremos executar esta consulta de inserção passando para a função PHP "mysqli
 
 /* Esteja rodando um servidor MySQL com user "root" sem senha */
 
-$link = mysqli_connect("localhost", "root", "", "empregados");
+$link = mysqli_connect("localhost", "root", "5b7a20cxmFEM", "empregados");
 
 // Verificar a conexão
 if($link === false){

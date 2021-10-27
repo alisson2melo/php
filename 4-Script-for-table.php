@@ -6,7 +6,7 @@
 //Definindo o servidor, nome de usuário, senha e nome do banco de dados
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root'); 
-define('DB_PASSWORD', ''); 
+define('DB_PASSWORD', '5b7a20cxmFEM'); 
 define('DB_NAME', 'empregados'); 
 
 //variável para tentar se conectar com banco de dados MySQL, método processual

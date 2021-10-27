@@ -54,7 +54,7 @@ que pode ser usado para criar novos registros na tabela de funcionários.
                    <!-- 2º Parte -->
                    <?php
                     //Incluir o arquivo do script php
-                    require_once "Script-for-table.php";
+                    require_once "4-script-for-table.php";
                     
                     // Tentar selecionar a execução da consulta
                     $sql = "SELECT * FROM funcionários";
