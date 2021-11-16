@@ -11,9 +11,8 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
 
     if($stmt = mysqli_prepare($link, $sql)){
         // Vincule as variáveis ​​à instrução preparada como parâmetros
-        mysqli_stmt_bind_param($stmt, "i", $param_id)
-
-        // Defina os parâmetros
+        mysqli_stmt_bind_param($stmt, "i", $param_id);
+         
         $param_id = trim($_GET["id"]);
 
         // Tentativa de executar a declaração preparada

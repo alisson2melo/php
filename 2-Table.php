@@ -4,13 +4,13 @@
 Uma tabela organiza as informações em linhas e colunas, onde manterão os dados
 "VARCHAR" - é para quando o tamanho dos caracteres é variável, portanto ele ajustará a coluna com o comprimento máximo. Neste caso, comprimento máx:100 e 30
 "INT" - é um tipo de dados. Neste caso, é usado para gerar um valor-exclusivo para cada registro na tabela (PRIMARY_KEY) 
-"NULL" "NOT NULL": NULL é valor desconhecido, 0; NOT NULL é o oposto, 1 */
+"NULL" "NOT NULL": NULL é valor desconhecido, 0; NOT NULL é o oposto, 1
 
-/* Vamos fazer uma consulta SQL usando a instrução "CREATE TABLE", 
+ Vamos fazer uma consulta SQL usando a instrução "CREATE TABLE", 
 depois executaremos esta consulta SQL passando-a para a função PHP "mysqli_query()" para criar nossa tabela. */
 
 //Esteja rodando servidor MySQL com user "root" e sem senha
-$link = mysqli_connect("localhost", "root", "5b7a20cxmFEM", "empregados");
+$link = mysqli_connect("localhost", "root", "", "empregados");
 
 //Verificar conexão
 if($link === false){

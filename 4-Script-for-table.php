@@ -6,17 +6,20 @@
 //Definindo o servidor, nome de usuário, senha e nome do banco de dados
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root'); 
-define('DB_PASSWORD', '5b7a20cxmFEM'); 
+define('DB_PASSWORD', ''); 
 define('DB_NAME', 'empregados'); 
 
 //variável para tentar se conectar com banco de dados MySQL, método processual
+
 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
 //Verificar a conexão
+
 if ($link == false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 
 }
+
 //Se o valor da variável for false (0), aparecerá aquela string de ERROR;
 
 /* A função "die" é usado para imprimir a mensagem e sair do script php atual;

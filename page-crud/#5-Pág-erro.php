@@ -21,7 +21,7 @@ ou seja, se o parâmetro "id" estiver faltando na string de consulta do URL ou s
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="mt-5 mb-3">Solicitação Inválida</h2>
-                    <div class="alert alert-danger">Desculpe, você fez uma solicitação inválida. Por favor <a href="index.php" class="alert-link">volte</a> tente novamente.</div>
+                    <div class="alert alert-danger">Desculpe, você fez uma solicitação inválida. Por favor <a href="index.php" class="alert-link">volte</a> e tente novamente.</div>
                 </div>
             </div>        
         </div>
