@@ -1,44 +1,59 @@
 <?php
+ 
 /* Ele excluirá os registros existentes da tabela de "funcionários" com base no atributo "id" do funcionário. */
 
-// Processo de operação de exclusão após confirmação
-if(isset($_POST["id"]) && !empty($_POST["id"])){
-    // Incluir arquivo de configuração
-    require_once "4-script-for-table.php";
 
-    // Prepare uma declaração de exclusão
-    $sql = "DELETE FROM funcionários WHERE id = ?";
+// Processo de operação de exclusão após confirmação do usuário
 
-    if($stmt = mysqli_prepare($link, $sql)){
-        // Vincule as variáveis ​​à instrução preparada como parâmetros
-        mysqli_stmt_bind_param($stmt, "i", $param_id);
-        
-        // Defina o parâmetro
-        $param_id = trim($_POST["id"]);
+if (isset($_POST["id"]) && !empty($_POST["id"])) {
+         
+        // Incluir arquivo de configuração
+        require_once "4-script-for-table.php";
 
-        // Tentativa de executar o parâmetro declarado
-        if(mysqli_stmt_execute($stmt)){
-            // Exclusão do registro bem-sucedida. Redirecionando para a página inicial
-            header("location: index.php");
-            exit();
-        } else{
-            echo "Oops! Algo deu errado. Tente novamente mais tarde.";
+        // Prepare uma declaração de exclusão
+        $sql = "DELETE FROM funcionários WHERE id = ?";
+
+        $stmt = mysqli_prepare($link, $sql);        
+
+        if ($stmt = mysqli_prepare($link, $sql)) {
+                
+                // Vincule as variáveis ​​à instrução preparada como parâmetros
+                mysqli_stmt_bind_param($stmt, "i", $param_id);
+                
+                // Defina o parâmetro
+                $param_id = trim($_POST["id"]);
+
+                // Tentativa de executar o parâmetro declarado
+                mysqli_stmt_execute($stmt); 
+
+                if($dlc = mysqli_stmt_execute($stmt)) {
+                    // Exclusão do registro bem-sucedida. Redirecionando para a página inicial
+                    header("location: index.php");
+                    exit();
+                 
+                
+                }    
+                
+            // Terminar a declaração
+            mysqli_stmt_close($stmt);
+        } else {
+            echo "Algo deu errado com a consulta: " . mysqli_error($link);
         }
-
-        }
-    }
-     // Terminar a declaração
-    mysqli_stmt_close($stmt);
+}
+else{ 
+    echo 'Ops! Algo deu errado. Tente novamente mais tarde...';
+}
     
-    // Terminar a conexão
-    mysqli_close($link);
+// Terminar a conexão
+mysqli_close($link);
     
-    // Verificar a existência do parâmetro "id"
-    if(empty(trim($_GET["id"]))){
-         // O URL não contém o parâmetro id. Redirecionar para a página de erro
-         header("location: #5-Pág-erro.php");
-         exit();
-    }
+// Verificar a existência do parâmetro "id"
+    
+if(empty(trim($_GET["id"]))) {
+    // O URL não contém o parâmetro id. Redirecionar para a página de erro
+    header("location: #5-Pág-erro.php");
+    exit();
+}
 
 
 ?>

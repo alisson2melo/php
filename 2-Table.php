@@ -20,17 +20,17 @@ if($link === false){
 /*"CREATE TABLE" - é usada para criar uma tabela no banco de dados, dã!*/
 
 // Tentativa de criar uma execução de consulta na tabela "funcionários"
-$sql = "CREATE TABLE funcionários ( 
+$mysql = "CREATE TABLE funcionários ( 
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, 
     nome VARCHAR(100) NOT NULL, 
     cargo VARCHAR(30) NOT NULL, 
     salário int(10) NOT NULL 
 )";
 
-if(mysqli_query($link, $sql)){
+if(mysqli_query($link, $mysql)){
     echo "Tabela criada com sucesso.";
 } else {
-    echo "ERROR: Isto não pode ser executado para $sql." . mysqli_error($link);
+    echo "ERROR: Isto não pode ser executado para $mysql." . mysqli_error($link);
 }
 
 // Terminar conexão aberta

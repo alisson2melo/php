@@ -20,9 +20,7 @@
     // "INSERT INTO" - é usada para inserir novas linhas em uma tabela de banco de dados.
     $sql = "INSERT INTO funcionários (nome, cargo, salário) VALUES 
                                     ('Cleiton', 'Dev. Sênior', '4.000'),
-                                    ('Jéssica', 'Dev. Pleno', '3.500'),
-                                    ('Ridinei', 'Dev. Jr', '3.200'),
-                                    ('Claudinei', 'Analista TI', '2.900')"; 
+                                    ('Jéssica', 'Dev. Pleno', '3.500')"; 
                                     
                                     if(mysqli_query($link, $sql)){
                                         echo "Regsitros adicionados com sucesso.";
