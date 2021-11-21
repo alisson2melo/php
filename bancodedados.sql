@@ -6,7 +6,7 @@ CREATE TABLE funcionários (
 ); 
  
 INSERT INTO funcionários (nome, cargo, salário) VALUES 
-                            ('Cleiton', 'Dev. Sênior', '4.000'),
+                            ('Clei', 'Dev. Sênior', '4.000'),
                             ('Jéssica', 'Dev. Pleno', '3.500');
 
  
